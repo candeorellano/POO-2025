@@ -25,9 +25,9 @@ def menu():
                  [4] Listar libros
                  [0] SALIR
                  --> """))
+        return op
     except ValueError:
         print("Error. Se esperaba un numero entero.")
-    return op
 
 if __name__=='__main__':
     gb = GestorBibliotecas()
@@ -47,7 +47,6 @@ if __name__=='__main__':
     opcion = menu()
 
     while opcion != 0:
-        try:
             if opcion == 1:
                 nombre = input("Ingrese el nombre de la biblioteca a la cual desea agregarle un libro: ")
                 i = gb.buscaBiblio(nombre)
@@ -69,6 +68,5 @@ if __name__=='__main__':
                 gb.listar()
             else:
                 print("Opcion incorrecta. Intente de nuevo")
-        except ValueError:
-            print("Error. Se esperaba un numero entero.")
-        opcion = menu()
+            opcion = menu()
+    print("Saliendo...")
