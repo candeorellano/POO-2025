@@ -1,6 +1,5 @@
 from gestorHoteles import GestorHoteles
 from claseHotel import Hotel
-from claseHabitacion import Habitacion
 
 def menu():
     try:
@@ -12,9 +11,9 @@ def menu():
                 [5] Mostrar la cantidad de habitaciones libres por piso.
                 [6] Mostrar detalles de habitaciones por tipo. 
                     --> """))
+        return op
     except ValueError:
         print("Error. Se esperaba un numero entero")
-    return op
 
 if __name__=='__main__':
     gh = GestorHoteles()
@@ -35,23 +34,32 @@ if __name__=='__main__':
     while opcion != 0:
         if opcion == 1:
             nombre = input("Ingrese el nombre del hotel al que desea agregarle una habitacion: ")
-            i = gh.buscarHotel(nombre)
-            numHab=int(input("Ingrese el numero de habitacion: "))
-            p=int(input("Ingrese el piso de la habitacion: "))
-            t=input("Indique el tipo de habitacion (sencilla, doble, suite): ")
-            precio=float(input("Indique el precio de la habitacion: "))
-            dispo=True
-            gh.agregarHab(i, numHab,p,t,precio,dispo)
+            try:
+                i = gh.buscarHotel(nombre)
+                numHab=int(input("Ingrese el numero de habitacion: "))
+                p=int(input("Ingrese el piso de la habitacion: "))
+                t=input("Indique el tipo de habitacion (sencilla, doble, suite): ")
+                precio=float(input("Indique el precio de la habitacion: "))
+                dispo=True
+                gh.agregarHab(i, numHab,p,t,precio,dispo)
+            except IndexError as e:
+                print(e)
         elif opcion == 2:
             nombre = input("Ingrese el nombre del hotel al que desea reservar una habitacion: ")
-            i = gh.buscarHotel(nombre)
-            num=int(input("Ingrese el numero de habitacion: "))
-            gh.reservaHab(i, num)
+            try:
+                i = gh.buscarHotel(nombre)
+                num=int(input("Ingrese el numero de habitacion: "))
+                gh.reservaHab(i, num)
+            except IndexError as e:
+                print(e)
         elif opcion == 3:
             nombre = input("Ingrese el nombre del hotel al que desea liberar una habitacion: ")
-            i = gh.buscarHotel(nombre)
-            num=int(input("Ingrese el numero de habitacion: "))
-            gh.liberaHab(i, num)
+            try:
+                i = gh.buscarHotel(nombre)
+                num=int(input("Ingrese el numero de habitacion: "))
+                gh.liberaHab(i, num)
+            except IndexError as e:
+                print(e)
         elif opcion == 4:
             tipo = input("Indique el tipo de habitacion: ")
             gh.mostrarHab(tipo)
