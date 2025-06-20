@@ -1,1 +1,16 @@
+{% extends "base_template.html" %}
+{% block title %}Inicio - Sistema de Control de Horarios{% endblock %}
 
+{% block content %}
+    <h1>Bienvenido al Sistema de Control de Horarios</h1>
+    <h2>Instituto Nuevo Horizonte</h2>
+    <p>Seleccione una opción:</p>
+
+    <ul style="list-style-type: none; padding: 0;">
+        <li>
+            <a href="{{ url_for('acceso_trabajador') }}">
+                <button>Acceder como trabajador</button>
+            </a>
+        </li>
+    </ul>
+{% endblock %}

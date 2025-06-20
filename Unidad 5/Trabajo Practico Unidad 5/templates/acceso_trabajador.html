@@ -1,0 +1,14 @@
+{% extends "base_template.html" %}
+{% block title %}Acceso de Trabajador{% endblock %}
+
+{% block content %}
+<h1>Acceso de Trabajador</h1>
+<p>Seleccione una opción:</p>
+
+<div class="menu-opciones">
+    <a href="{{ url_for('registro_entrada') }}"><button>Registrar Entrada</button></a>
+    <a href="{{ url_for('registro_salida') }}"><button>Registrar Salida</button></a>
+    <a href="{{ url_for('consulta_registros') }}"><button>Consultar Registros</button></a>
+    <a href="{{ url_for('inicio') }}"><button class="volver">Volver al Inicio</button></a>
+</div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base_template.html" %}
+
+{% block title %}Registros de {{ trabajador.nombre }}{% endblock %}
+
+{% block content %}
+    <h2>Registros de {{ trabajador.nombre }} {{ trabajador.apellido }}</h2>
+
+    {% if registros %}
+    <div class="tabla-contenedor">
+        <table class="tabla-estilizada">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Hora de entrada</th>
+                    <th>Hora de salida</th>
+                    <th>Dependencia</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for r in registros %}
+                <tr>
+                    <td>{{ r.fecha }}</td>
+                    <td>{{ r.horaentrada or '—' }}</td>
+                    <td>{{ r.horasalida or '—' }}</td>
+                    <td>
+                        {% if r.dependencia == 'D01' %}Edificio Central
+                        {% elif r.dependencia == 'D02' %}Talleres
+                        {% else %}Centro Deportivo
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+        <p>No hay registros para mostrar.</p>
+    {% endif %}
+{% endblock %}

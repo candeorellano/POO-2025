@@ -1,0 +1,23 @@
+{% extends "base_template.html" %}
+
+{% block title %}Consulta de Registros{% endblock %}
+
+{% block content %}
+<h2>Consultar Registros Horarios</h2>
+
+<form method="POST" class="formulario-modern">
+    <label for="legajo">Número de legajo:</label>
+    <input type="text" name="legajo" id="legajo" required>
+
+    <label for="dni">Últimos 4 dígitos del DNI:</label>
+    <input type="text" name="dni" id="dni" maxlength="4" required>
+
+    <label for="inicio_periodo">Fecha inicio:</label>
+    <input type="date" name="inicio_periodo" id="inicio_periodo" required>
+
+    <label for="fin_periodo">Fecha fin:</label>
+    <input type="date" name="fin_periodo" id="fin_periodo" required>
+
+    <input type="submit" value="Consultar">
+</form>
+{% endblock %}

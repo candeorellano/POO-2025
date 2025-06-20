@@ -1,0 +1,31 @@
+{% extends "base_template.html" %}
+{% block title %}Registro de Entrada{% endblock %}
+
+{% block content %}
+    <h2>Registrar Entrada</h2>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="mensaje {{ category }}">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <form method="POST" class="formulario-modern">
+        <label for="legajo">Número de legajo:</label>
+        <input type="text" name="legajo" id="legajo" required>
+
+        <label for="dni">Últimos 4 dígitos del DNI:</label>
+        <input type="text" name="dni" id="dni" maxlength="4" required>
+
+        <label for="dependencia">Dependencia:</label>
+        <select name="dependencia" id="dependencia" required>
+            <option value="D01">Edificio Central</option>
+            <option value="D02">Talleres</option>
+            <option value="D03">Centro Deportivo</option>
+        </select>
+
+        <input type="submit" value="Registrar Entrada">
+    </form>
+{% endblock %}

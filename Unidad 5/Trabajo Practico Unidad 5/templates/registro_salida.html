@@ -1,0 +1,37 @@
+{% extends "base_template.html" %}
+{% block title %}Registro de Salida{% endblock %}
+
+{% block content %}
+    <h2>Registrar Salida</h2>
+
+    <!-- Mostrar mensajes flash -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+        <div class="mensaje {{ category }}">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <!-- Formulario para verificar identidad -->
+    <form method="POST" class="formulario-modern">
+        <label for="legajo">Número de legajo:</label>
+        <input type="text" name="legajo" id="legajo" required>
+
+        <label for="dni">Últimos 4 dígitos del DNI:</label>
+        <input type="text" name="dni" id="dni" maxlength="4" required>
+
+        <input type="submit" value="Verificar y Confirmar Salida">
+    </form>
+
+    <!-- Si ya se verificó la entrada, mostrar confirmación -->
+    {% if registro %}
+        <div class="formulario-modern">
+            <p>¿Confirmás la salida para la dependencia <strong>{{ registro.dependencia }}</strong>?</p>
+            <form method="POST" action="{{ url_for('confirmar_salida') }}">
+                <input type="hidden" name="registro_id" value="{{ registro.id }}">
+                <input type="submit" value="Confirmar Salida">
+            </form>
+        </div>
+    {% endif %}
+{% endblock %}
