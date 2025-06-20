@@ -1,1 +1,274 @@
+/* Tipografía moderna y fondo suave */
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6fa;
+    color: #2c3e50;
+    margin: 0;
+    padding: 40px;
+}
 
+/* Títulos elegantes */
+h1, h2, h3 {
+    color: #1a202c;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Contenedor principal centrado */
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Formulario con tarjeta */
+form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+/* Etiquetas y campos */
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #374151;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background-color: #fff;
+}
+
+/* Botones modernos */
+input[type="submit"],
+button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: #3b82f6;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #2563eb;
+}
+
+/* Mensajes flash estilosos */
+.mensaje {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.success {
+    background-color: #dcfce7;
+    color: #15803d;
+    border-left: 6px solid #16a34a;
+}
+
+.error {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border-left: 6px solid #ef4444;
+}
+
+.warning {
+    background-color: #fef9c3;
+    color: #92400e;
+    border-left: 6px solid #facc15;
+}
+
+.info {
+    background-color: #e0f2fe;
+    color: #1e40af;
+    border-left: 6px solid #3b82f6;
+}
+
+/* Tablas modernas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 14px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+    background-color: #f3f4f6;
+    color: #374151;
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: #f9fafb;
+}
+
+.menu-opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.menu-opciones a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.menu-opciones button {
+    all: unset;
+    background-color: #2b73fa;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.menu-opciones button:hover {
+    background-color: #6a83f0;
+}
+
+.menu-opciones .volver {
+    background-color: #6b7280;
+}
+
+.menu-opciones .volver:hover {
+    background-color: #4b5563;
+}
+
+.formulario-modern {
+    background-color: #fff;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    max-width: 500px;
+}
+
+.formulario-modern label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.formulario-modern input[type="text"],
+.formulario-modern select {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s;
+}
+
+.formulario-modern input[type="submit"] {
+    width: 100%;
+    background-color: #3b82f6;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario-modern input[type="submit"]:hover {
+    background-color: #2563eb;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.tabla-estilizada {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    font-size: 15px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.tabla-estilizada th {
+    background-color: #3b82f6;
+    color: white;
+    text-align: left;
+    padding: 12px 10px;
+}
+
+.tabla-estilizada td {
+    padding: 10px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.tabla-estilizada tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.tabla-estilizada tr:hover {
+    background-color: #f1f5f9;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF; /* azul bonito */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* azul más oscuro al pasar el mouse */
+    text-decoration: none;
+    color: white;
+}
