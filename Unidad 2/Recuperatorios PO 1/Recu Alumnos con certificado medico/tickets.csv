@@ -1,0 +1,6 @@
+idTicket;idHardware;descripcion;tipoServicio;fechaPedido;fechaTerminacion;nombreTecnico
+tk000001;hw10005;No enciende;Hardware;01/06/2025;;
+tk000002;hw10002;Se reinicia constantemente;Software;01/06/2025;02/06/2025;Marcos Deredita
+tk000003;hw10003;Teclado no funciona;Hardware;02/06/2025;02/06/2025;Marcos Deredita
+tk000004;hw10004;No se conecta a la Red;Red;03/06/2025;;
+tk000005;hw10003;Paquete de oficina no funciona;Software;10/06/2025;;
