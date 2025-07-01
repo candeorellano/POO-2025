@@ -50,4 +50,4 @@ class Ticket:
                 f"Tecnico: {self.__tecnico}")
     
     def __eq__(self, servicio):
-        return self.__servicio == servicio
+        return self.getServicio() == servicio
