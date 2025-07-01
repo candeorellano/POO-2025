@@ -57,11 +57,10 @@ class Equipo:
     def __gt__(self, otro):
         retorno = None
 
-        if self.__puntos != otro.__puntos:
-            retorno = self.__puntos > otro.__puntos
-        elif self.__diferenciaGoles != otro.__diferenciaGoles:
-            retorno = self.__diferenciaGoles > otro.__diferenciaGoles
+        if self.getPuntos() != otro.getPuntos():
+            retorno = self.getPuntos() > otro.getPuntos()
+        elif self.getDiferenciaGoles() != otro.getDiferenciaGoles():
+            retorno = self.getDiferenciaGoles() > otro.getDiferenciaGoles()
         else:
-            retorno = self.__golesAFavor > otro.__golesAFavor
-        
+            retorno = self.getGolesAFavor() > otro.getGolesAFavor()        
         return retorno
